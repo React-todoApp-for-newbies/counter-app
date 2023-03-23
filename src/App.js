@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useState } from "react";
 
-function App() {
+const App = () => {
+  const [age, setAge] = useState(0);
+  const onIncrement = () => {
+    setAge(age + 1);
+  };
+  const onDecrement = () => {
+    setAge(age - 1);
+  };
+  const setZero = () => {
+    setAge(0);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {age}
+      <button onClick={onIncrement}>increment</button>
+      <button onClick={setZero}>set to zero</button>
+      <button onClick={onDecrement}>decrement</button>
     </div>
   );
-}
+};
 
 export default App;
