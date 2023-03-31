@@ -16,9 +16,9 @@ const App = () => {
   return (
     <div>
       {age}
-      <button onClick={onIncrement}>increment</button>
+      <button onClick={onIncrement}>increment ++</button>
       <button onClick={setZero}>set to zero</button>
-      <button onClick={onDecrement}>decrement</button>
+      <button onClick={onDecrement}>decrement --</button>
     </div>
   );
 };
